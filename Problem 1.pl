@@ -1,5 +1,9 @@
 #!/usr/bin/perl -w
 
+use strict;
+use warnings;
+use Math::Complex;
+
 $sum = 0;
 $last = 1;
 

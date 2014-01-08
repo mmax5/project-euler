@@ -1,3 +1,7 @@
+#!/usr/bin/perl -w
+
+use strict;
+use warnings;
 
 $i = 20*20;
 $found = 0;

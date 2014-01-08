@@ -1,5 +1,8 @@
 #!/usr/bin/perl -w
- use Math::Complex;
+
+use strict;
+use warnings;
+use Math::Complex;
 
 $num = 600851475143;
 $largest = 2;
