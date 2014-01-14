@@ -10,31 +10,31 @@ Evaluate the sum of all the amicable numbers under 10000.
 from math import sqrt
 
 
-def findDivisor(n):
+def find_divisor(n):
     for i in xrange(1, int(sqrt(n)+1)):
         if n%i == 0:
             yield i
             if i is not n / i and i is not 1:
                 yield n/i
 
-def isAmicable(n, m):
-    if sum(findDivisor(n)) == m and sum(findDivisor(m)) == n:
+def is_amicable(n, m):
+    if sum(find_divisor(n)) == m and sum(find_divisor(m)) == n:
         return True
     return False
 
-amicableNumbers = []
+amicable_numbers = []
 
 for x in range(1, 10000):
     for y in range(x+1, 10000):
-        if isAmicable(x, y) and [x, y] not in amicableNumbers and [y, x] not in amicableNumbers:
-            amicableNumbers.append([x,y])
+        if is_amicable(x, y) and [x, y] not in amicable_numbers and [y, x] not in amicable_numbers:
+            amicable_numbers.append([x,y])
 
 
 a = 0
 
-print amicableNumbers
+print amicable_numbers
 
-for x in amicableNumbers:
+for x in amicable_numbers:
     a = a + x[0] + x[1]
 
 print a
