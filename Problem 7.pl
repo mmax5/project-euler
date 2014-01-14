@@ -4,9 +4,9 @@ use strict;
 use warnings;
 use Math::Complex;
 
-$count = -1;
-$result = 0;
-for($i = 2;$count != 10001; $i++){
+my $count = -1;
+my $result = 0;
+for(my $i = 2;$count != 10001; $i++){
 	if(is_prime($i)){
 		$count++;
 		}
@@ -18,9 +18,9 @@ for($i = 2;$count != 10001; $i++){
 print "$result";
 	
 	sub is_prime{
-	$max = int($_[0]);
-	$n = $max/2;
-	for($j = 2; $j < $n; $j++){
+	my $max = int($_[0]);
+	my $n = $max/2;
+	for(my $j = 2; $j < $n; $j++){
 		if ($max % $j == 0){
 			return 0;
 			}
